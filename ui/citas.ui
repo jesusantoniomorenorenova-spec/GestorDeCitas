@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>734</width>
-    <height>567</height>
+    <width>641</width>
+    <height>554</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@ Background-color:#8fbfec;</string>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
-     <widget class="QFrame" name="frame_3">
+     <widget class="QFrame" name="frame_2">
       <property name="styleSheet">
        <string notr="true">QFrame{
      border: 2px solid black;
@@ -34,9 +34,9 @@ Background-color:#8fbfec;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <widget class="QLabel" name="lblTituloCliente">
+        <widget class="QLabel" name="lblCItas">
          <property name="font">
           <font>
            <pointsize>13</pointsize>
@@ -45,10 +45,10 @@ Background-color:#8fbfec;</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:null;</string>
+          <string notr="true">border:none</string>
          </property>
          <property name="text">
-          <string>Clientes</string>
+          <string>Citas</string>
          </property>
         </widget>
        </item>
@@ -61,28 +61,118 @@ Background-color:#8fbfec;</string>
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="0">
-           <widget class="QLabel" name="lblNombre">
+          <item row="1" column="4" colspan="2">
+           <widget class="QComboBox" name="cmbServicio">
             <property name="styleSheet">
-             <string notr="true">border:null;</string>
+             <string notr="true">border:none;
+background-color: #ffffff;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="2">
+           <widget class="QComboBox" name="cmbCliente">
+            <property name="styleSheet">
+             <string notr="true">border:none;
+background-color: #ffffff;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLabel" name="lblServicio">
+            <property name="styleSheet">
+             <string notr="true">border:none</string>
             </property>
             <property name="text">
-             <string>Nombre</string>
+             <string>Servicio</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="txtNombre">
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblCliente">
             <property name="styleSheet">
-             <string notr="true">background-color: #ffffff;</string>
+             <string notr="true">border:none;</string>
             </property>
-            <property name="placeholderText">
-             <string>Ej. Julieta Venegas</string>
+            <property name="text">
+             <string>Cliente</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="2" rowspan="3">
+          <item row="5" column="0">
+           <widget class="QLabel" name="lblFecha">
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Fecha</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="4" colspan="2">
+           <widget class="QTimeEdit" name="timeHora">
+            <property name="styleSheet">
+             <string notr="true">border:none;
+background-color: #ffffff;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="3">
+           <widget class="QLabel" name="lblHora">
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Hora</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1" colspan="2">
+           <widget class="QDateEdit" name="dateFecha">
+            <property name="styleSheet">
+             <string notr="true">border:none;
+background-color: #ffffff;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="lblEstado">
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Estado</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1" colspan="2">
+           <widget class="QComboBox" name="cmbEstado">
+            <property name="styleSheet">
+             <string notr="true">border:none;
+background-color: #ffffff;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="3">
+           <widget class="QLabel" name="lblNotas">
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="text">
+             <string>Notas</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="6" rowspan="7">
            <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QPushButton" name="btnAgregar">
+              <property name="styleSheet">
+               <string notr="true">background-color: #ffffff;</string>
+              </property>
+              <property name="text">
+               <string>Agregar</string>
+              </property>
+             </widget>
+            </item>
             <item>
              <widget class="QPushButton" name="btnEditar">
               <property name="styleSheet">
@@ -90,16 +180,6 @@ Background-color:#8fbfec;</string>
               </property>
               <property name="text">
                <string>Editar</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btnAgregar">
-              <property name="styleSheet">
-               <string notr="true">background-color: #ffffff;</string>
-              </property>
-              <property name="text">
-               <string>Agragar</string>
               </property>
              </widget>
             </item>
@@ -114,7 +194,7 @@ Background-color:#8fbfec;</string>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="btnLimpiar">
+             <widget class="QPushButton" name="btnEliminar_2">
               <property name="styleSheet">
                <string notr="true">background-color: #ffffff;</string>
               </property>
@@ -125,43 +205,10 @@ Background-color:#8fbfec;</string>
             </item>
            </layout>
           </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="lblTelefono">
-            <property name="styleSheet">
-             <string notr="true">border:null;</string>
-            </property>
-            <property name="text">
-             <string>Telefono</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="txtTelefono">
+          <item row="6" column="4" colspan="2">
+           <widget class="QPlainTextEdit" name="txtNotas">
             <property name="styleSheet">
              <string notr="true">background-color: #ffffff;</string>
-            </property>
-            <property name="placeholderText">
-             <string>Ej. 636-114-55-52</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="lblCorreo">
-            <property name="styleSheet">
-             <string notr="true">border:null;</string>
-            </property>
-            <property name="text">
-             <string>Correo</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="txtCorreo">
-            <property name="styleSheet">
-             <string notr="true">background-color: #ffffff;</string>
-            </property>
-            <property name="placeholderText">
-             <string>Ej. correo@gmail.com</string>
             </property>
            </widget>
           </item>
@@ -169,22 +216,10 @@ Background-color:#8fbfec;</string>
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_2">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+        <widget class="QTableView" name="tblCitas">
+         <property name="styleSheet">
+          <string notr="true">background-color: #ffffff;</string>
          </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_2">
-          <item>
-           <widget class="QTableWidget" name="tblClientes">
-            <property name="styleSheet">
-             <string notr="true">background-color: #ffffff;</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
         </widget>
        </item>
        <item>
@@ -196,8 +231,8 @@ Background-color:#8fbfec;</string>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>40</width>
-             <height>17</height>
+             <width>238</width>
+             <height>20</height>
             </size>
            </property>
           </spacer>
@@ -208,7 +243,7 @@ Background-color:#8fbfec;</string>
             <string notr="true">background-color: #ffffff;</string>
            </property>
            <property name="text">
-            <string>Volver</string>
+            <string>volver</string>
            </property>
           </widget>
          </item>
