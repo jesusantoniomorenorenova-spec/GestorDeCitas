@@ -14,19 +14,89 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-Background-color:#8fbfec;</string>
+   <string notr="true">/*fondo*/
+QMainWindow{
+Background-color:#8fbfec;
+}
+/*frame*/
+QFrame{
+border:2px solid black;
+border-radius: 30px;
+background-color: #D0EDFC
+}
+
+
+/*label*/
+QLabel{
+border:none;
+color:#black;
+}
+
+/*botones*/
+QPushButton{
+background-color: #f6f6f6;
+border: 1px solid black;
+border-radius: 30px;
+padding: 8px 14px;
+}
+
+/*hover:cuando paso el maus*/
+QpushButton:hover{
+background-color: white;
+color: black;
+border: 2px solid #1b4f72;
+}
+
+/*presionado*/
+QPushButton:pressed{
+background-color: white;
+color:black;
+}
+
+/*tabla*/
+QTableView{
+background-color: #ffffff;
+border:2px solid black;
+border-radius: 30px;
+}
+
+/*notas*/
+QPlainTextEdit{
+background-color: #ffffff;
+}
+
+
+/*TXT*/
+QLineEdit{
+background-color:#ffffff;
+border:1px solid black;
+}
+
+QComboBox{
+background-color:#ffffff;
+border:1px solid black;
+}
+
+QTimeEdit{
+background-color:#ffffff;
+border:1px solid black;
+}
+
+QDateEdit{
+background-color:#ffffff;
+border:1px solid black;
+}
+
+
+
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
      <widget class="QFrame" name="frame_2">
       <property name="styleSheet">
-       <string notr="true">QFrame{
-     border: 2px solid black;
-     border-radius:30px;
-     background-color: #D0EDFC
-}</string>
+       <string notr="true"/>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -45,7 +115,7 @@ Background-color:#8fbfec;</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:none</string>
+          <string notr="true"/>
          </property>
          <property name="text">
           <string>Citas</string>
@@ -64,23 +134,21 @@ Background-color:#8fbfec;</string>
           <item row="1" column="4" colspan="2">
            <widget class="QComboBox" name="cmbServicio">
             <property name="styleSheet">
-             <string notr="true">border:none;
-background-color: #ffffff;</string>
+             <string notr="true"/>
             </property>
            </widget>
           </item>
           <item row="1" column="1" colspan="2">
            <widget class="QComboBox" name="cmbCliente">
             <property name="styleSheet">
-             <string notr="true">border:none;
-background-color: #ffffff;</string>
+             <string notr="true"/>
             </property>
            </widget>
           </item>
           <item row="1" column="3">
            <widget class="QLabel" name="lblServicio">
             <property name="styleSheet">
-             <string notr="true">border:none</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Servicio</string>
@@ -90,7 +158,7 @@ background-color: #ffffff;</string>
           <item row="1" column="0">
            <widget class="QLabel" name="lblCliente">
             <property name="styleSheet">
-             <string notr="true">border:none;</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Cliente</string>
@@ -100,7 +168,7 @@ background-color: #ffffff;</string>
           <item row="5" column="0">
            <widget class="QLabel" name="lblFecha">
             <property name="styleSheet">
-             <string notr="true">border:none;</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Fecha</string>
@@ -110,15 +178,14 @@ background-color: #ffffff;</string>
           <item row="5" column="4" colspan="2">
            <widget class="QTimeEdit" name="timeHora">
             <property name="styleSheet">
-             <string notr="true">border:none;
-background-color: #ffffff;</string>
+             <string notr="true"/>
             </property>
            </widget>
           </item>
           <item row="5" column="3">
            <widget class="QLabel" name="lblHora">
             <property name="styleSheet">
-             <string notr="true">border:none;</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Hora</string>
@@ -128,15 +195,14 @@ background-color: #ffffff;</string>
           <item row="5" column="1" colspan="2">
            <widget class="QDateEdit" name="dateFecha">
             <property name="styleSheet">
-             <string notr="true">border:none;
-background-color: #ffffff;</string>
+             <string notr="true"/>
             </property>
            </widget>
           </item>
           <item row="6" column="0">
            <widget class="QLabel" name="lblEstado">
             <property name="styleSheet">
-             <string notr="true">border:none;</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Estado</string>
@@ -146,15 +212,14 @@ background-color: #ffffff;</string>
           <item row="6" column="1" colspan="2">
            <widget class="QComboBox" name="cmbEstado">
             <property name="styleSheet">
-             <string notr="true">border:none;
-background-color: #ffffff;</string>
+             <string notr="true"/>
             </property>
            </widget>
           </item>
           <item row="6" column="3">
            <widget class="QLabel" name="lblNotas">
             <property name="styleSheet">
-             <string notr="true">border:none;</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Notas</string>
@@ -166,7 +231,7 @@ background-color: #ffffff;</string>
             <item>
              <widget class="QPushButton" name="btnAgregar">
               <property name="styleSheet">
-               <string notr="true">background-color: #ffffff;</string>
+               <string notr="true"/>
               </property>
               <property name="text">
                <string>Agregar</string>
@@ -176,7 +241,7 @@ background-color: #ffffff;</string>
             <item>
              <widget class="QPushButton" name="btnEditar">
               <property name="styleSheet">
-               <string notr="true">background-color: #ffffff;</string>
+               <string notr="true"/>
               </property>
               <property name="text">
                <string>Editar</string>
@@ -186,7 +251,7 @@ background-color: #ffffff;</string>
             <item>
              <widget class="QPushButton" name="btnEliminar">
               <property name="styleSheet">
-               <string notr="true">background-color: #ffffff;</string>
+               <string notr="true"/>
               </property>
               <property name="text">
                <string>Eliminar</string>
@@ -196,7 +261,7 @@ background-color: #ffffff;</string>
             <item>
              <widget class="QPushButton" name="btnEliminar_2">
               <property name="styleSheet">
-               <string notr="true">background-color: #ffffff;</string>
+               <string notr="true"/>
               </property>
               <property name="text">
                <string>Limpiar</string>
@@ -208,7 +273,7 @@ background-color: #ffffff;</string>
           <item row="6" column="4" colspan="2">
            <widget class="QPlainTextEdit" name="txtNotas">
             <property name="styleSheet">
-             <string notr="true">background-color: #ffffff;</string>
+             <string notr="true"/>
             </property>
            </widget>
           </item>
@@ -218,7 +283,7 @@ background-color: #ffffff;</string>
        <item>
         <widget class="QTableView" name="tblCitas">
          <property name="styleSheet">
-          <string notr="true">background-color: #ffffff;</string>
+          <string notr="true"/>
          </property>
         </widget>
        </item>
@@ -240,10 +305,13 @@ background-color: #ffffff;</string>
          <item>
           <widget class="QPushButton" name="btnVolver">
            <property name="styleSheet">
-            <string notr="true">background-color: #ffffff;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>volver</string>
+           </property>
+           <property name="QPushButton" stdset="0">
+            <string/>
            </property>
           </widget>
          </item>

@@ -14,23 +14,50 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-Background-color:#E4F4FF;
+   <string notr="true">/*fondo*/
+QMainWindow{
+background-color: #E4F4FF;
+}
+/*frame*/
+QFrame{
+border:2px solid black;
+border-radius: 30px;
+background-color: #8fbfec;
+}
 
+/*label*/
+QLabel{
+border:none;
+color:#black;
+}
 
-</string>
+/*botones*/
+QPushButton{
+background-color: #f6f6f6;
+border: 2px solid black;
+border-radius: 25px;
+padding: 8px 14px;
+}
+
+/*hover:cuando paso el maus*/
+QpushButton:hover{
+background-color: white;
+color: black;
+border: 2px solid #1b4f72;
+}
+
+/*presionado*/
+QPushButton:pressed{
+background-color: white;
+color:black;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QFrame" name="frame">
       <property name="styleSheet">
-       <string notr="true">QFrame{
-border: 2px solid black;
-border-radius: 30px;
-Background-color:#8fbfec;
-}
-</string>
+       <string notr="true"/>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -49,7 +76,7 @@ Background-color:#8fbfec;
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:null ;</string>
+          <string notr="true"/>
          </property>
          <property name="text">
           <string>Gestor de Citas</string>
@@ -67,7 +94,7 @@ Background-color:#8fbfec;
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:null ;</string>
+          <string notr="true"/>
          </property>
          <property name="text">
           <string>seleciona una opcion</string>
@@ -93,9 +120,7 @@ Background-color:#8fbfec;
        <item>
         <widget class="QFrame" name="frameBotones">
          <property name="styleSheet">
-          <string notr="true">border-radius: 25;
-border:2px solid black;
-</string>
+          <string notr="true"/>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -118,24 +143,13 @@ border:2px solid black;
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton { 
-    background-color:#f6f6f6;              
-    border-radius: 25px;
-}
-
-QPushButton:hover {
-    background-color: white; 
-   color: black; 
- 
-}
-
-QPushButton:pressed {
-    background-color: white;    
-    color: black;              
-}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Clientes</string>
+            </property>
+            <property name="QpushButton" stdset="0">
+             <string/>
             </property>
            </widget>
           </item>
@@ -153,21 +167,7 @@ QPushButton:pressed {
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton { 
-    background-color:#f6f6f6;              
-    border-radius: 25px;
-}
-
-QPushButton:hover {
-    background-color: white; 
-   color: black; 
- 
-}
-
-QPushButton:pressed {
-    background-color: white;    
-    color: black;              
-}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Citas</string>
@@ -188,21 +188,7 @@ QPushButton:pressed {
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton { 
-    background-color:#f6f6f6;              
-    border-radius: 25px;
-}
-
-QPushButton:hover {
-    background-color: white; 
-   color: black; 
- 
-}
-
-QPushButton:pressed {
-    background-color: white;    
-    color: black;              
-}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Reporte</string>
@@ -223,21 +209,7 @@ QPushButton:pressed {
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton { 
-    background-color:#f6f6f6;              
-    border-radius: 25px;
-}
-
-QPushButton:hover {
-    background-color: white; 
-   color: black; 
- 
-}
-
-QPushButton:pressed {
-    background-color: white;    
-    color: black;              
-}</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Salir</string>
@@ -263,7 +235,7 @@ QPushButton:pressed {
        <item>
         <widget class="QLabel" name="lblFoter">
          <property name="styleSheet">
-          <string notr="true">border:null ;</string>
+          <string notr="true"/>
          </property>
          <property name="text">
           <string>@jesusantoniomoreno</string>

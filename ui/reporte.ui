@@ -13,90 +13,182 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">/*fondo*/
+QMainWindow{
+Background-color:#8fbfec;
+}
+/*frame*/
+QFrame{
+border:2px solid black;
+border-radius: 30px;
+background-color: #D0EDFC
+}
+
+
+/*label*/
+QLabel{
+border:none;
+color:#black;
+}
+
+/*botones*/
+QPushButton{
+background-color: #f6f6f6;
+border: 1px solid black;
+border-radius: 30px;
+padding: 8px 14px;
+}
+
+/*hover:cuando paso el maus*/
+QpushButton:hover{
+background-color: white;
+color: black;
+border: 2px solid #1b4f72;
+}
+
+/*presionado*/
+QPushButton:pressed{
+background-color: white;
+color:black;
+}
+
+/*tabla*/
+QTableView{
+background-color: #ffffff;
+border:2px solid black;
+border-radius: 30px;
+}
+
+/*notas*/
+QPlainTextEdit{
+background-color: #ffffff;
+}
+
+
+/*TXT*/
+QLineEdit{
+background-color:#ffffff;
+border:1px solid black;
+}
+
+QComboBox{
+background-color:#ffffff;
+border:1px solid black;
+}
+
+QTimeEdit{
+background-color:#ffffff;
+border:1px solid black;
+}
+
+QDateEdit{
+background-color:#ffffff;
+border:1px solid black;
+}
+
+
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="lblTtuloReporteDECitas">
-      <property name="font">
-       <font>
-        <pointsize>13</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Reporte De Citas</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QFrame" name="frame">
+     <widget class="QFrame" name="frame_2">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0">
-        <widget class="QLabel" name="lblEstado">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="lblTtuloReporteDECitas">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
-          <string>Estado</string>
+          <string>Reporte De Citas</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
-        <widget class="QComboBox" name="cmbEstadoFiltro"/>
-       </item>
-       <item row="0" column="2">
-        <spacer name="horizontalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="styleSheet">
+          <string notr="true"/>
          </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>526</width>
-           <height>20</height>
-          </size>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
          </property>
-        </spacer>
-       </item>
-       <item row="0" column="3">
-        <widget class="QPushButton" name="btnImprimir">
-         <property name="text">
-          <string>Imprimir</string>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
          </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblEstado">
+            <property name="text">
+             <string>Estado</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="cmbEstadoFiltro"/>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>526</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="3">
+           <widget class="QPushButton" name="btnImprimir">
+            <property name="text">
+             <string>Imprimir</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
+       </item>
+       <item>
+        <widget class="QTableView" name="tblReporte"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnVolver">
+           <property name="text">
+            <string>Volver</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </widget>
-    </item>
-    <item>
-     <widget class="QTableView" name="tblReporte"/>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="btnVolver">
-        <property name="text">
-         <string>Volver</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
     </item>
    </layout>
   </widget>

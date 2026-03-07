@@ -6,27 +6,73 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>734</width>
-    <height>567</height>
+    <width>690</width>
+    <height>539</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-Background-color:#8fbfec;</string>
+   <string notr="true">/*fondo*/
+QMainWindow{
+Background-color:#8fbfec;
+}
+/*frame*/
+QFrame{
+border:2px solid black;
+border-radius: 30px;
+background-color: #D0EDFC
+}
+
+
+/*label*/
+QLabel{
+border:none;
+color:#black;
+}
+
+/*botones*/
+QPushButton{
+background-color: #f6f6f6;
+border: 1px solid black;
+border-radius: 25px;
+padding: 8px 14px;
+}
+
+/*hover:cuando paso el maus*/
+QpushButton:hover{
+background-color: white;
+color: black;
+border: 2px solid #1b4f72;
+}
+
+/*presionado*/
+QPushButton:pressed{
+background-color: white;
+color:black;
+}
+
+/*tabla*/
+QTableWidget{
+background-color: #ffffff;
+border:2px solid black;
+border-radius: 30px;
+}
+
+/*TXT*/
+QLineEdit{
+background-color:#ffffff;
+border:1px solid black;
+}
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
      <widget class="QFrame" name="frame_3">
       <property name="styleSheet">
-       <string notr="true">QFrame{
-     border: 2px solid black;
-     border-radius:30px;
-     background-color: #D0EDFC
-}</string>
+       <string notr="true"/>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -45,7 +91,7 @@ Background-color:#8fbfec;</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:null;</string>
+          <string notr="true"/>
          </property>
          <property name="text">
           <string>Clientes</string>
@@ -64,7 +110,7 @@ Background-color:#8fbfec;</string>
           <item row="0" column="0">
            <widget class="QLabel" name="lblNombre">
             <property name="styleSheet">
-             <string notr="true">border:null;</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Nombre</string>
@@ -74,7 +120,7 @@ Background-color:#8fbfec;</string>
           <item row="0" column="1">
            <widget class="QLineEdit" name="txtNombre">
             <property name="styleSheet">
-             <string notr="true">background-color: #ffffff;</string>
+             <string notr="true"/>
             </property>
             <property name="placeholderText">
              <string>Ej. Julieta Venegas</string>
@@ -86,7 +132,7 @@ Background-color:#8fbfec;</string>
             <item>
              <widget class="QPushButton" name="btnEditar">
               <property name="styleSheet">
-               <string notr="true">background-color: #ffffff;</string>
+               <string notr="true"/>
               </property>
               <property name="text">
                <string>Editar</string>
@@ -96,7 +142,7 @@ Background-color:#8fbfec;</string>
             <item>
              <widget class="QPushButton" name="btnAgregar">
               <property name="styleSheet">
-               <string notr="true">background-color: #ffffff;</string>
+               <string notr="true"/>
               </property>
               <property name="text">
                <string>Agragar</string>
@@ -106,7 +152,7 @@ Background-color:#8fbfec;</string>
             <item>
              <widget class="QPushButton" name="btnEliminar">
               <property name="styleSheet">
-               <string notr="true">background-color: #ffffff;</string>
+               <string notr="true"/>
               </property>
               <property name="text">
                <string>Eliminar</string>
@@ -116,7 +162,7 @@ Background-color:#8fbfec;</string>
             <item>
              <widget class="QPushButton" name="btnLimpiar">
               <property name="styleSheet">
-               <string notr="true">background-color: #ffffff;</string>
+               <string notr="true"/>
               </property>
               <property name="text">
                <string>Limpiar</string>
@@ -128,7 +174,7 @@ Background-color:#8fbfec;</string>
           <item row="1" column="0">
            <widget class="QLabel" name="lblTelefono">
             <property name="styleSheet">
-             <string notr="true">border:null;</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Telefono</string>
@@ -138,7 +184,7 @@ Background-color:#8fbfec;</string>
           <item row="1" column="1">
            <widget class="QLineEdit" name="txtTelefono">
             <property name="styleSheet">
-             <string notr="true">background-color: #ffffff;</string>
+             <string notr="true"/>
             </property>
             <property name="placeholderText">
              <string>Ej. 636-114-55-52</string>
@@ -148,7 +194,7 @@ Background-color:#8fbfec;</string>
           <item row="2" column="0">
            <widget class="QLabel" name="lblCorreo">
             <property name="styleSheet">
-             <string notr="true">border:null;</string>
+             <string notr="true"/>
             </property>
             <property name="text">
              <string>Correo</string>
@@ -158,7 +204,7 @@ Background-color:#8fbfec;</string>
           <item row="2" column="1">
            <widget class="QLineEdit" name="txtCorreo">
             <property name="styleSheet">
-             <string notr="true">background-color: #ffffff;</string>
+             <string notr="true"/>
             </property>
             <property name="placeholderText">
              <string>Ej. correo@gmail.com</string>
@@ -180,7 +226,7 @@ Background-color:#8fbfec;</string>
           <item>
            <widget class="QTableWidget" name="tblClientes">
             <property name="styleSheet">
-             <string notr="true">background-color: #ffffff;</string>
+             <string notr="true"/>
             </property>
            </widget>
           </item>
@@ -205,7 +251,7 @@ Background-color:#8fbfec;</string>
          <item>
           <widget class="QPushButton" name="btnVolver">
            <property name="styleSheet">
-            <string notr="true">background-color: #ffffff;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Volver</string>
