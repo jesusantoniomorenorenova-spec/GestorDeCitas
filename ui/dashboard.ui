@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>631</width>
+    <width>571</width>
     <height>650</height>
    </rect>
   </property>
@@ -16,40 +16,79 @@
   <property name="styleSheet">
    <string notr="true">/*fondo*/
 QMainWindow{
-background-color: #E4F4FF;
+background-color: #0b0f1a;
 }
 /*frame*/
 QFrame{
-border:2px solid black;
-border-radius: 30px;
-background-color: #8fbfec;
+background-color: #0b0f1a;
+border:2px solid #7df9ff;
+border-radius: 24px;
+color:white;
+
+box-shadow:0 0 14px rgba(125,249,255,0.55);
+
+}
+
+QFrame#frameBotones{
+background-color: rgba(10,14,30,0.75);
+border:2px solid #7df9ff;
+border-radius: 24px;
+
+box-shadow:0 0 14px rgba(125,249,255,0.55);
 }
 
 /*label*/
-QLabel{
+QLabel#lblTitulo{
+color: #7df9ff;
+font-size:28px;
+font-weight: 800;
+letter-spacing:1px;
 border:none;
-color:#black;
+}
+
+QLabel#lblSubtitulo{
+color: white;
+font-size:14px;
+border:none;
+}
+
+QLabel#lblFoter{
+color: white;
+border:none;
+
 }
 
 /*botones*/
 QPushButton{
-background-color: #f6f6f6;
-border: 2px solid black;
-border-radius: 25px;
-padding: 8px 14px;
+background-color: rgba(14,18,38,0.9);
+color:#e7faff;
+
+border: 2px solid #00ffa8;
+border-radius: 22px;
+
+padding: 12px 16px;
+font-size:15px;
+font-weight: 700;
+
+box-shadow:0 0 12px rgba(0,255,168,0.45);
 }
 
 /*hover:cuando paso el maus*/
-QpushButton:hover{
-background-color: white;
-color: black;
-border: 2px solid #1b4f72;
+QPushButton:hover{
+background-color: rgba(255,255,255,0.07);
+color: white;
+
+border: 2px solid #ff2bd6;
+box-shadow: 0 0 18px rgba(255,43,214,0.65);
 }
 
 /*presionado*/
 QPushButton:pressed{
-background-color: white;
-color:black;
+background-color: rgba(0,255,168,0.10);
+border:2px solid #7df9ff;
+
+box-shadow:0 0 22 rgba(125,249,255,0.70);
+
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -70,8 +109,8 @@ color:black;
         <widget class="QLabel" name="lblTitulo">
          <property name="font">
           <font>
-           <pointsize>26</pointsize>
-           <weight>75</weight>
+           <pointsize>-1</pointsize>
+           <weight>99</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -90,7 +129,7 @@ color:black;
         <widget class="QLabel" name="lblSubtitulo">
          <property name="font">
           <font>
-           <pointsize>10</pointsize>
+           <pointsize>-1</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -139,7 +178,9 @@ color:black;
             </property>
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>-1</pointsize>
+              <weight>87</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
@@ -163,7 +204,9 @@ color:black;
             </property>
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>-1</pointsize>
+              <weight>87</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
@@ -184,7 +227,9 @@ color:black;
             </property>
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>-1</pointsize>
+              <weight>87</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
@@ -205,7 +250,9 @@ color:black;
             </property>
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>-1</pointsize>
+              <weight>87</weight>
+              <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
