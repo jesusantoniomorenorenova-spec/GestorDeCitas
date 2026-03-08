@@ -41,7 +41,7 @@ padding: 8px 14px;
 }
 
 /*hover:cuando paso el maus*/
-QpushButton:hover{
+QPushButton:hover{
 background-color: white;
 color: black;
 border: 2px solid #1b4f72;
@@ -137,6 +137,10 @@ border:1px solid black;
               <property name="text">
                <string>Editar</string>
               </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/edit_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</normaloff>../img/edit_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</iconset>
+              </property>
              </widget>
             </item>
             <item>
@@ -146,6 +150,10 @@ border:1px solid black;
               </property>
               <property name="text">
                <string>Agragar</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/add_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</normaloff>../img/add_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</iconset>
               </property>
              </widget>
             </item>
@@ -157,6 +165,10 @@ border:1px solid black;
               <property name="text">
                <string>Eliminar</string>
               </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/delete_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</normaloff>../img/delete_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</iconset>
+              </property>
              </widget>
             </item>
             <item>
@@ -166,6 +178,13 @@ border:1px solid black;
               </property>
               <property name="text">
                <string>Limpiar</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/mop_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</normaloff>../img/mop_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</iconset>
+              </property>
+              <property name="autoExclusive">
+               <bool>false</bool>
               </property>
              </widget>
             </item>
@@ -255,6 +274,10 @@ border:1px solid black;
            </property>
            <property name="text">
             <string>Volver</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../img/arrow_back_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</normaloff>../img/arrow_back_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</iconset>
            </property>
           </widget>
          </item>

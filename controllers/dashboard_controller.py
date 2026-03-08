@@ -9,10 +9,9 @@ from controllers.reporte_controller import ReporteWindow
 UI_DIR = Path(__file__).resolve().parents[1] / "ui"
 
 class DashboardWindow(QMainWindow):
-    def __init__(self, repo=None):
+    def __init__(self):
         super().__init__()
         uic.loadUi(UI_DIR / "dashboard.ui", self)
-        self.repo = None
         self._ventana_actual = None 
 
         self.btnClientes.clicked.connect(self.abrir_clientes)

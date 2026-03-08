@@ -41,7 +41,7 @@ padding: 8px 14px;
 }
 
 /*hover:cuando paso el maus*/
-QpushButton:hover{
+QPushButton:hover{
 background-color: white;
 color: black;
 border: 2px solid #1b4f72;
@@ -152,8 +152,15 @@ border:1px solid black;
           </item>
           <item row="0" column="3">
            <widget class="QPushButton" name="btnImprimir">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
             <property name="text">
              <string>Imprimir</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../img/print_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</normaloff>../img/print_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</iconset>
             </property>
            </widget>
           </item>
@@ -182,6 +189,10 @@ border:1px solid black;
           <widget class="QPushButton" name="btnVolver">
            <property name="text">
             <string>Volver</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../img/arrow_back_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</normaloff>../img/arrow_back_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</iconset>
            </property>
           </widget>
          </item>
