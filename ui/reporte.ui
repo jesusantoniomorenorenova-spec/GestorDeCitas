@@ -32,6 +32,14 @@ border:none;
 color:#black;
 }
 
+QLabel#lblTtuloReporteDECitas{
+border:none;
+color:#black;
+Font-size:28px;
+border:none;
+
+}
+
 /*botones*/
 QPushButton{
 background-color: #f6f6f6;
@@ -105,9 +113,7 @@ border:1px solid black;
         <widget class="QLabel" name="lblTtuloReporteDECitas">
          <property name="font">
           <font>
-           <pointsize>13</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <pointsize>-1</pointsize>
           </font>
          </property>
          <property name="text">

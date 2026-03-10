@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>690</width>
-    <height>539</height>
+    <width>340</width>
+    <height>484</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,6 +30,15 @@ background-color: #D0EDFC
 QLabel{
 border:none;
 color:#black;
+border:none;
+}
+
+QLabel#lblTituloCliente{
+border:none;
+color:#black;
+Font-size:28px;
+border:none;
+
 }
 
 /*botones*/
@@ -85,9 +94,7 @@ border:1px solid black;
         <widget class="QLabel" name="lblTituloCliente">
          <property name="font">
           <font>
-           <pointsize>13</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <pointsize>-1</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -119,6 +126,12 @@ border:1px solid black;
           </item>
           <item row="0" column="1">
            <widget class="QLineEdit" name="txtNombre">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>22</height>
+             </size>
+            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>

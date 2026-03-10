@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>641</width>
-    <height>554</height>
+    <width>651</width>
+    <height>613</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,6 +31,15 @@ QLabel{
 border:none;
 color:#black;
 }
+
+QLabel#lblCItas{
+border:none;
+color:#black;
+Font-size:28px;
+border:none;
+
+}
+
 
 /*botones*/
 QPushButton{
@@ -109,9 +118,7 @@ border:1px solid black;
         <widget class="QLabel" name="lblCItas">
          <property name="font">
           <font>
-           <pointsize>13</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <pointsize>-1</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -138,13 +145,6 @@ border:1px solid black;
             </property>
            </widget>
           </item>
-          <item row="1" column="1" colspan="2">
-           <widget class="QComboBox" name="cmbCliente">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-           </widget>
-          </item>
           <item row="1" column="3">
            <widget class="QLabel" name="lblServicio">
             <property name="styleSheet">
@@ -155,13 +155,17 @@ border:1px solid black;
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="lblCliente">
+          <item row="1" column="1" colspan="2">
+           <widget class="QComboBox" name="cmbCliente">
             <property name="styleSheet">
              <string notr="true"/>
             </property>
-            <property name="text">
-             <string>Cliente</string>
+           </widget>
+          </item>
+          <item row="5" column="4" colspan="2">
+           <widget class="QTimeEdit" name="timeHora">
+            <property name="styleSheet">
+             <string notr="true"/>
             </property>
            </widget>
           </item>
@@ -175,10 +179,13 @@ border:1px solid black;
             </property>
            </widget>
           </item>
-          <item row="5" column="4" colspan="2">
-           <widget class="QTimeEdit" name="timeHora">
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblCliente">
             <property name="styleSheet">
              <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Cliente</string>
             </property>
            </widget>
           </item>
