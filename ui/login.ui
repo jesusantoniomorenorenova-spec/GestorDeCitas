@@ -6,15 +6,91 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>380</width>
-    <height>434</height>
+    <width>429</width>
+    <height>556</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Login - Flower Shop</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: #474762;</string>
+   <string notr="true">/*fondo*/
+QDialog{
+background-color: #0b0f1a;
+}
+/*frame*/
+QFrame{
+background-color: #0b0f1a;
+border:2px solid #7df9ff;
+border-radius: 24px;
+color:white;
+
+box-shadow:0 0 14px rgba(125,249,255,0.55);
+
+}
+
+
+/*label*/
+QLabel#lblTitle{
+color: #7df9ff;
+font-size:28px;
+font-weight: 800;
+letter-spacing:1px;
+border:none;
+}
+
+QLabel{
+color: white;
+font-size:14px;
+border:none;
+}
+
+
+
+/*botones*/
+QPushButton{
+background-color: rgba(14,18,38,0.9);
+color:#e7faff;
+
+border: 2px solid #00ffa8;
+border-radius: 22px;
+
+padding: 12px 16px;
+font-size:15px;
+font-weight: 700;
+
+box-shadow:0 0 12px rgba(0,255,168,0.45);
+}
+
+/*hover:cuando paso el maus*/
+QPushButton:hover{
+background-color: rgba(255,255,255,0.07);
+color: white;
+
+border: 2px solid #ff2bd6;
+box-shadow: 0 0 18px rgba(255,43,214,0.65);
+}
+
+/*presionado*/
+QPushButton:pressed{
+background-color: rgba(0,255,168,0.10);
+border:2px solid #7df9ff;
+
+box-shadow:0 0 22 rgba(125,249,255,0.70);
+
+}
+
+/*TXT*/
+QLineEdit{
+background-color:#ffffff;
+border:1px solid black;
+}
+
+QCheckBox{
+color: white;
+border:1px solid black;
+
+}</string>
   </property>
   <layout class="QVBoxLayout" name="root">
    <property name="spacing">
@@ -35,7 +111,7 @@
    <item>
     <widget class="QFrame" name="loginCard">
      <property name="styleSheet">
-      <string notr="true">background-color: #f5f5fb;</string>
+      <string notr="true"/>
      </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
@@ -79,7 +155,7 @@
       <item>
        <widget class="QLineEdit" name="txt_username">
         <property name="styleSheet">
-         <string notr="true">background-color: #ffffff;</string>
+         <string notr="true"/>
         </property>
         <property name="placeholderText">
          <string>Usuario</string>
@@ -89,7 +165,7 @@
       <item>
        <widget class="QLineEdit" name="txt_password">
         <property name="styleSheet">
-         <string notr="true">background-color: #ffffff;</string>
+         <string notr="true"/>
         </property>
         <property name="echoMode">
          <enum>QLineEdit::Password</enum>
@@ -102,7 +178,10 @@
       <item>
        <layout class="QHBoxLayout" name="opts">
         <item>
-         <widget class="QCheckBox" name="chkRemember">
+         <widget class="QCheckBox" name="Checkbox">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
           <property name="text">
            <string>Recordarme</string>
           </property>
@@ -136,7 +215,7 @@
       <item>
        <widget class="QPushButton" name="btn_login">
         <property name="styleSheet">
-         <string notr="true">background-color: #ffffff;</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>Ingresar</string>
