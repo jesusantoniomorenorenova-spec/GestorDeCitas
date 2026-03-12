@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>684</width>
-    <height>601</height>
+    <width>823</width>
+    <height>836</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -114,7 +114,7 @@ border:1px solid black;
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="0">
+          <item row="1" column="0">
            <widget class="QLabel" name="lblNombre">
             <property name="styleSheet">
              <string notr="true"/>
@@ -124,7 +124,7 @@ border:1px solid black;
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item row="1" column="1">
            <widget class="QLineEdit" name="txtNombre">
             <property name="minimumSize">
              <size>
@@ -140,22 +140,48 @@ border:1px solid black;
             </property>
            </widget>
           </item>
-          <item row="0" column="2" rowspan="3">
-           <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
-             <widget class="QPushButton" name="btnEditar">
-              <property name="styleSheet">
-               <string notr="true"/>
-              </property>
-              <property name="text">
-               <string>Editar</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>../img/edit_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</normaloff>../img/edit_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</iconset>
-              </property>
-             </widget>
-            </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="txtTelefono">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="placeholderText">
+             <string>Ej. 636-114-55-52</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblTelefono">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Telefono</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="txtCorreo">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="placeholderText">
+             <string>Ej. correo@gmail.com</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lblCorreo">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Correo</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
             <item>
              <widget class="QPushButton" name="btnAgregar">
               <property name="styleSheet">
@@ -167,6 +193,20 @@ border:1px solid black;
               <property name="icon">
                <iconset>
                 <normaloff>../img/add_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</normaloff>../img/add_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnEditar">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>Editar</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../img/edit_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</normaloff>../img/edit_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png</iconset>
               </property>
              </widget>
             </item>
@@ -202,46 +242,6 @@ border:1px solid black;
              </widget>
             </item>
            </layout>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="lblTelefono">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="text">
-             <string>Telefono</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="txtTelefono">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="placeholderText">
-             <string>Ej. 636-114-55-52</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="lblCorreo">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="text">
-             <string>Correo</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="txtCorreo">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="placeholderText">
-             <string>Ej. correo@gmail.com</string>
-            </property>
-           </widget>
           </item>
          </layout>
         </widget>

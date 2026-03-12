@@ -17,15 +17,19 @@
    <string notr="true">/*fondo*/
 QMainWindow{
 background-color: #0b0f1a;
+
+
 }
 /*frame*/
-QFrame{
+QFrame#frame{
 background-color: #0b0f1a;
 border:2px solid #7df9ff;
 border-radius: 24px;
 color:white;
 
 box-shadow:0 0 14px rgba(125,249,255,0.55);
+border-image:url(&quot;img/archive-folders-of-administrator-neon-glow-icon-illustration-vector&quot;);
+
 
 }
 
@@ -115,7 +119,7 @@ box-shadow:0 0 22 rgba(125,249,255,0.70);
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">background-color: transparent;</string>
          </property>
          <property name="text">
           <string>Gestor de Citas</string>
