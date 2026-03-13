@@ -177,7 +177,7 @@ border:1px solid black;
        <item>
         <widget class="QTableView" name="tblReporte">
          <property name="styleSheet">
-          <string notr="true">border-image:url(&quot;img/data_table_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24&quot;);</string>
+          <string notr="true"/>
          </property>
         </widget>
        </item>
