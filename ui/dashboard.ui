@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>571</width>
-    <height>650</height>
+    <width>555</width>
+    <height>614</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -122,7 +122,7 @@ box-shadow:0 0 22 rgba(125,249,255,0.70);
           <string notr="true">background-color: transparent;</string>
          </property>
          <property name="text">
-          <string>Gestor de Citas</string>
+          <string>Time Control</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
