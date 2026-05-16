@@ -78,6 +78,7 @@ border: 1px solid black;
 /*notas*/
 QPlainTextEdit{
 background-color: #ffffff;
+color: black;
 }
 
 
@@ -92,6 +93,12 @@ QComboBox{
 background-color:#ffffff;
 border:1px solid black;
 color: black;
+}
+QComboBox QAbstractItemView {
+color: black;
+background-color: white;
+selection-background-color: #D0EDFC;
+selection-color: black;
 }
 
 QTimeEdit{

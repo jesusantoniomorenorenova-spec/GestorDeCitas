@@ -86,11 +86,13 @@ class ClientesWindow(QMainWindow):
         valores = (nombre, telefono, correo, id_cliente)
 
         try:
-            self.db.ejecutar(sql, valores)
-            self.db.commit()
-            QMessageBox.information(self, "Éxito", "Cliente modificado correctamente")
-            self.limpiar_campos()
-            self.cargar_clientes()
+            filas = self.db.ejecutar_update(sql, valores)
+            if filas > 0:
+                QMessageBox.information(self, "Éxito", "Cliente modificado correctamente")
+                self.limpiar_campos()
+                self.cargar_clientes()
+            else:
+                QMessageBox.warning(self, "Error", "No se pudo modificar el cliente")
         except Exception as e:
             QMessageBox.critical(self, "Error", f"No se pudo modificar: {e}")
 
@@ -110,11 +112,13 @@ class ClientesWindow(QMainWindow):
             sql = "DELETE FROM clientes WHERE id = %s"
 
             try:
-                self.db.ejecutar(sql, (id_cliente,))
-                self.db.commit()
-                QMessageBox.information(self, "Éxito", "Cliente eliminado correctamente")
-                self.limpiar_campos()
-                self.cargar_clientes()
+                filas = self.db.ejecutar_update(sql, (id_cliente,))
+                if filas > 0:
+                    QMessageBox.information(self, "Éxito", "Cliente eliminado correctamente")
+                    self.limpiar_campos()
+                    self.cargar_clientes()
+                else:
+                    QMessageBox.warning(self, "Error", "No se pudo eliminar el cliente")
             except Exception as e:
                 QMessageBox.critical(self, "Error", f"No se pudo eliminar: {e}")
 
