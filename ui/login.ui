@@ -83,7 +83,8 @@ box-shadow:0 0 22 rgba(125,249,255,0.70);
 /*TXT*/
 QLineEdit{
 background-color:#F5F3F0;
-border: 2px solid #00ffa8
+border: 2px solid #00ffa8;
+color: black;
 }
 
 QCheckBox{

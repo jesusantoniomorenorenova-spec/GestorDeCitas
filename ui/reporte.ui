@@ -21,7 +21,6 @@ Background-color:#8fbfec;
 /*frame*/
 QFrame{
 border:2px solid black;
-border-radius: 30px;
 background-color: #D0EDFC
 }
 
@@ -29,12 +28,12 @@ background-color: #D0EDFC
 /*label*/
 QLabel{
 border:none;
-color:#black;
+color: black;
 }
 
 QLabel#lblTtuloReporteDECitas{
 border:none;
-color:#black;
+color: black;
 Font-size:28px;
 border:none;
 
@@ -43,6 +42,7 @@ border:none;
 /*botones*/
 QPushButton{
 background-color: #f6f6f6;
+color: black;
 border: 1px solid black;
 border-radius: 30px;
 padding: 8px 14px;
@@ -65,7 +65,6 @@ color:black;
 QTableView{
 background-color: #ffffff;
 border:2px solid black;
-border-radius: 30px;
 
 }
 
@@ -79,21 +78,25 @@ background-color: #ffffff;
 QLineEdit{
 background-color:#ffffff;
 border:1px solid black;
+color: black;
 }
 
 QComboBox{
 background-color:#ffffff;
 border:1px solid black;
+color: black;
 }
 
 QTimeEdit{
 background-color:#ffffff;
 border:1px solid black;
+color: black;
 }
 
 QDateEdit{
 background-color:#ffffff;
 border:1px solid black;
+color: black;
 }
 
 
@@ -102,13 +105,16 @@ border:1px solid black;
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QFrame" name="frame_2">
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
+<widget class="QFrame" name="frame_2">
+       <property name="styleSheet">
+        <string notr="true">QFrame#frame_2 { background-color: #D0EDFC; border: 2px solid black; padding: 8px; }</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QLabel" name="lblTtuloReporteDECitas">
@@ -174,13 +180,31 @@ border:1px solid black;
          </layout>
         </widget>
        </item>
-       <item>
-        <widget class="QTableView" name="tblReporte">
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-        </widget>
-       </item>
+<item>
+         <widget class="QFrame" name="frameTabla">
+<property name="styleSheet">
+            <string notr="true">QFrame#frameTabla { background-color: #D0EDFC; border: 2px solid black; }</string>
+           </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayoutTabla">
+           <item>
+            <widget class="QTableView" name="tblReporte">
+<property name="styleSheet">
+              <string notr="true">QTableView { background-color: #ffffff; border: 2px solid black; }</string>
+              </property>
+<property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>80</height>
+               </size>
+              </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
