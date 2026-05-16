@@ -63,9 +63,16 @@ color:black;
 }
 
 /*tabla*/
-QTableView{
+QTableWidget{
 background-color: #ffffff;
+color: black;
 border:2px solid black;
+}
+QHeaderView::section {
+background-color: #D0EDFC;
+color: black;
+padding: 5px;
+border: 1px solid black;
 }
 
 /*notas*/
@@ -316,7 +323,7 @@ color: black;
           </property>
           <layout class="QVBoxLayout" name="verticalLayoutTabla">
            <item>
-            <widget class="QTableView" name="tblCitas">
+            <widget class="QTableWidget" name="tblCitas">
 <property name="styleSheet">
                <string notr="true">QTableView { background-color: #ffffff; border: 2px solid black; }</string>
               </property>

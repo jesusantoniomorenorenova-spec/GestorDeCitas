@@ -65,7 +65,14 @@ color:black;
 /*tabla*/
 QTableWidget{
 background-color: #ffffff;
+color: black;
 border:2px solid black;
+}
+QHeaderView::section {
+background-color: #D0EDFC;
+color: black;
+padding: 5px;
+border: 1px solid black;
 }
 
 /*TXT*/
