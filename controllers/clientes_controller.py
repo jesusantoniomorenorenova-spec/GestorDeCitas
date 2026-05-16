@@ -46,13 +46,32 @@ class ClientesWindow(QMainWindow):
                 for j in range(4):
                     self.tblClientes.setItem(i, j, QTableWidgetItem(str(cliente[j])))
 
+    def validar_datos(self, nombre, telefono, correo):
+        """Valida los datos del cliente"""
+        # Validar nombre
+        if not nombre or len(nombre.strip()) < 2:
+            return False, "El nombre debe tener al menos 2 caracteres"
+
+        # Validar teléfono - solo números, 10 dígitos
+        telefono_limpio = telefono.replace("-", "").replace(" ", "").replace("(", "").replace(")", "")
+        if telefono_limpio and (not telefono_limpio.isdigit() or len(telefono_limpio) != 10):
+            return False, "El teléfono debe contener exactamente 10 números"
+
+        # Validar email - debe tener @ y dominio
+        if correo and "@" not in correo:
+            return False, "El email debe incluir '@' y un dominio válido (ej: correo@dominio.com)"
+
+        return True, ""
+
     def insertar_cliente(self):
         nombre = self.txtNombre.text().strip()
         telefono = self.txtTelefono.text().strip()
         correo = self.txtCorreo.text().strip()
 
-        if nombre == "":
-            QMessageBox.warning(self, "Advertencia", "El nombre es obligatorio")
+        # Validar datos
+        es_valido, mensaje_error = self.validar_datos(nombre, telefono, correo)
+        if not es_valido:
+            QMessageBox.warning(self, "Error de validación", mensaje_error)
             return
 
         sql = "INSERT INTO clientes (nombre, telefono, correo) VALUES (%s, %s, %s)"
@@ -78,8 +97,10 @@ class ClientesWindow(QMainWindow):
         telefono = self.txtTelefono.text().strip()
         correo = self.txtCorreo.text().strip()
 
-        if nombre == "":
-            QMessageBox.warning(self, "Advertencia", "El nombre es obligatorio")
+        # Validar datos
+        es_valido, mensaje_error = self.validar_datos(nombre, telefono, correo)
+        if not es_valido:
+            QMessageBox.warning(self, "Error de validación", mensaje_error)
             return
 
         sql = "UPDATE clientes SET nombre = %s, telefono = %s, correo = %s WHERE id = %s"
